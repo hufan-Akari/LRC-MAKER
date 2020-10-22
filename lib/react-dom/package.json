@@ -52,8 +52,4 @@
       "loose-envify"
     ]
   }
-
-,"_resolved": "https://registry.npmjs.org/react-dom/-/react-dom-16.13.1.tgz"
-,"_integrity": "sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag=="
-,"_from": "react-dom@16.13.1"
 }
