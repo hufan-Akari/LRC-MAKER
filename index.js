@@ -1,7 +1,5 @@
 import { App } from "./components/app.js";
-if ("scrollBehavior" in document.documentElement.style) {
-}
-else {
+if (!("scrollBehavior" in document.documentElement.style)) {
     import("./polyfill/smooth-scroll.js");
 }
 ReactDOM.render(React.createElement(App), document.querySelector(".app-container"), () => {

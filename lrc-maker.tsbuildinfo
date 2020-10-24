@@ -297,13 +297,13 @@
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
-        "version": "fb83482d9944bf3605ad3b18ade5e8aff42e767d473745c261b9fb111979b179",
+        "version": "0edecca927f8aa8b6d1e3c81fc36a2f4cacb9346339eee51e186f0cc832cb4e0",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
       "../src/metadata.d.ts": {
-        "version": "fa32f02bc43d3fadea0a1a30312348996323e58f04e2ff805a4ddc353afe107b",
-        "signature": "fa32f02bc43d3fadea0a1a30312348996323e58f04e2ff805a4ddc353afe107b",
+        "version": "522c41d7d195f55d1f69f8a2d7bf88a67ac80d7137bba809e19843a8748b8d88",
+        "signature": "522c41d7d195f55d1f69f8a2d7bf88a67ac80d7137bba809e19843a8748b8d88",
         "affectsGlobalScope": true
       },
       "../types/post-message.d.ts": {
