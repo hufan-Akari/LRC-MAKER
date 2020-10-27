@@ -503,7 +503,7 @@
       }
     },
     "options": {
-      "target": 5,
+      "target": 4,
       "module": 99,
       "lib": [
         "lib.dom.d.ts",

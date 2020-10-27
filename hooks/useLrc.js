@@ -11,7 +11,7 @@ export const guard = (value, min, max) => {
 const mergeObject = (target, obj) => {
     for (const i in obj) {
         if (target[i] !== obj[i]) {
-            return { ...target, ...obj };
+            return Object.assign(Object.assign({}, target), obj);
         }
     }
     return target;
@@ -22,7 +22,7 @@ const reducer = (state, action) => {
             const { text, options } = action.payload;
             const lrc = parser(text, options);
             const selectIndex = guard(state.selectIndex, 0, lrc.lyric.length - 1);
-            return { ...state, ...lrc, selectIndex };
+            return Object.assign(Object.assign(Object.assign({}, state), lrc), { selectIndex });
         }
         case 1: {
             const audioTime = action.payload;
@@ -59,7 +59,7 @@ const reducer = (state, action) => {
                 lyric = newLyric;
             }
             const selectIndex = guard(index + 1, 0, lyric.length - 1);
-            return { ...state, lyric, selectIndex, currentTime: time, nextTime: -Infinity };
+            return Object.assign(Object.assign({}, state), { lyric, selectIndex, currentTime: time, nextTime: -Infinity });
         }
         case 3: {
             const { name, value } = action.payload;
@@ -70,14 +70,11 @@ const reducer = (state, action) => {
             else {
                 info.set(name, value.trim());
             }
-            return {
-                ...state,
-                info,
-            };
+            return Object.assign(Object.assign({}, state), { info });
         }
         case 4: {
             const selectIndex = guard(action.payload(state.selectIndex), 0, state.lyric.length - 1);
-            return state.selectIndex === selectIndex ? state : { ...state, selectIndex };
+            return state.selectIndex === selectIndex ? state : Object.assign(Object.assign({}, state), { selectIndex });
         }
         case 5: {
             const { selectIndex, currentIndex } = state;
@@ -91,12 +88,9 @@ const reducer = (state, action) => {
                     currentTime = Infinity;
                     nextTime = -Infinity;
                 }
-                return {
-                    ...state,
-                    lyric,
+                return Object.assign(Object.assign({}, state), { lyric,
                     currentTime,
-                    nextTime,
-                };
+                    nextTime });
             }
             return state;
         }
@@ -109,14 +103,7 @@ const reducer = (state, action) => {
 };
 const init = (lazyInit) => {
     const { text, options, select } = lazyInit();
-    return {
-        ...parser(text, options),
-        currentTime: Infinity,
-        currentIndex: Infinity,
-        nextTime: -Infinity,
-        nextIndex: -Infinity,
-        selectIndex: select,
-    };
+    return Object.assign(Object.assign({}, parser(text, options)), { currentTime: Infinity, currentIndex: Infinity, nextTime: -Infinity, nextIndex: -Infinity, selectIndex: select });
 };
 export const useLrc = (lazyInit) => React.useReducer(reducer, lazyInit, init);
 //# sourceMappingURL=useLrc.js.map

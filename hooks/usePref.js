@@ -23,10 +23,7 @@ const initState = {
 };
 const reducer = (state, action) => {
     const payload = action.payload;
-    return {
-        ...state,
-        [action.type]: typeof payload === "function" ? payload(state) : payload,
-    };
+    return Object.assign(Object.assign({}, state), { [action.type]: typeof payload === "function" ? payload(state) : payload });
 };
 const init = (lazyInit) => {
     const state = initState;

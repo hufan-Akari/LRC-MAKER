@@ -8,7 +8,7 @@ export const Toast = () => {
     const [toastQueue, setToastQueue] = useState([]);
     useEffect(() => {
         toastPubSub.sub(self.current, (data) => {
-            setToastQueue((queue) => [{ id: box.id++, ...data }, ...queue]);
+            setToastQueue((queue) => [Object.assign({ id: box.id++ }, data), ...queue]);
         });
     }, []);
     const onAnimationEnd = useCallback((ev) => {
