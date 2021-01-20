@@ -142,8 +142,8 @@
         "affectsGlobalScope": true
       },
       "../worker/metadata.d.ts": {
-        "version": "4b11bc112f1fc1e20e55e775d90fbf3950eaa8c1be8a284c3e9bc4ccfd06a0ee",
-        "signature": "4b11bc112f1fc1e20e55e775d90fbf3950eaa8c1be8a284c3e9bc4ccfd06a0ee",
+        "version": "f0b400b80b1cdf8b8b2a991fd537be4fc972e3e9dd6a4636c33d0197a3923f08",
+        "signature": "f0b400b80b1cdf8b8b2a991fd537be4fc972e3e9dd6a4636c33d0197a3923f08",
         "affectsGlobalScope": true
       },
       "../worker/ncmc-worker.ts": {

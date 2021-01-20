@@ -2,7 +2,7 @@
 const swWorker = self;
 const APP_NAME = "akari-lrc-maker";
 const VERSION = "5.4.10";
-const HASH = "3be5e39";
+const HASH = "7c1d824";
 const CACHENAME = `${APP_NAME}-${VERSION}-${HASH}`;
 swWorker.addEventListener("install", () => {
     swWorker.skipWaiting();

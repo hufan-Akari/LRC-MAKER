@@ -72,7 +72,7 @@ export const Preferences = () => {
         unregister();
     }, []);
     const updateTime = useMemo(() => {
-        const date = new Date("2021-01-20T21:48:25+08:00");
+        const date = new Date("2021-01-20T21:51:56+08:00");
         const options = {
             year: "numeric",
             month: "short",
@@ -151,7 +151,7 @@ export const Preferences = () => {
             React.createElement("li", null,
                 React.createElement("section", { className: "list-item" },
                     React.createElement("span", null, lang.preferences.commitHash),
-                    React.createElement("span", { className: "select-all" }, "3be5e39"))),
+                    React.createElement("span", { className: "select-all" }, "7c1d824"))),
             React.createElement("li", null,
                 React.createElement("section", { className: "list-item" },
                     React.createElement("span", null, lang.preferences.updateTime),
