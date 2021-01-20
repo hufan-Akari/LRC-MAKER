@@ -1,8 +1,8 @@
 "use strict";
 const swWorker = self;
 const APP_NAME = "akari-lrc-maker";
-const VERSION = "5.4.9";
-const HASH = "4edb92f";
+const VERSION = "5.4.10";
+const HASH = "3be5e39";
 const CACHENAME = `${APP_NAME}-${VERSION}-${HASH}`;
 swWorker.addEventListener("install", () => {
     swWorker.skipWaiting();
